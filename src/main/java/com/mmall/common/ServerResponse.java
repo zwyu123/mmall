@@ -24,4 +24,22 @@ public class ServerResponse<T> implements Serializable {
         this.status = status;
         this.msg = msg;
     }
+
+    public boolean isSuccess(){
+        return this.status == ResponseCode.SUCCESS.getCode();
+    }
+
+    public int getStatus(){
+        return status;
+    }
+    public T getData(){
+        return data;
+    }
+    public String getMsg(){
+        return msg;
+    }
+
+    public static <T> ServerResponse<T> createBySuccess(){
+        return new ServerResponse<T>(ResponseCode.SUCCESS.getCode());
+    }
 }
