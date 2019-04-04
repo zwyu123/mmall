@@ -203,6 +203,7 @@ public class ProductServiceImpl implements IProductService {
         if (StringUtils.isNotBlank(orderBy)){
             if (Const.ProductListOrderBy.PRICE_ASC_DESC.contains(orderBy)){
                 String[] orderByArray = orderBy.split("_");
+                //要传的参数格式PageHelper.orderBy("price desc")
                 PageHelper.orderBy(orderByArray[0]+" "+orderByArray[1]);
             }
         }
