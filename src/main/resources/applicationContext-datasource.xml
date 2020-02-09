@@ -74,9 +74,9 @@
 
     </bean>
 
-    <!--<bean name="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
-        <!--<property name="basePackage" value="com.mmall.dao"/>-->
-    <!--</bean>-->
+    <bean name="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.mmall.dao"/>
+    </bean>
 
     <!-- 使用@Transactional进行声明式事务管理需要声明下面这行 -->
     <!--<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />-->
